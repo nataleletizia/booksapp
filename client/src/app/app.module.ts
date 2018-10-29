@@ -13,12 +13,21 @@ import { AuthInterceptor } from './shared/okta/auth.interceptor';
 import { HomeComponent } from './home/home.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
+import { BookViewComponent } from './book-view/book-view.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'books',
+    component: BookListComponent
+  },
+  {
+    path: 'books/:id',
+    component: BookViewComponent
   },
   {
     path: 'book-list',
@@ -49,7 +58,8 @@ const config = {
     AppComponent,
     HomeComponent,
     BookListComponent,
-    BookEditComponent
+    BookEditComponent,
+    BookViewComponent
   ],
   imports: [
     BrowserModule,
