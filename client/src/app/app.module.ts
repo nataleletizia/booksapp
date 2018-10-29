@@ -3,11 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { CarListComponent } from './car-list/car-list.component';
 
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CarEditComponent } from './car-edit/car-edit.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { OktaCallbackComponent, OktaAuthModule } from '@okta/okta-angular';
@@ -21,18 +19,6 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
-  {
-    path: 'car-list',
-    component: CarListComponent
-  },
-  {
-    path: 'car-add',
-    component: CarEditComponent
-  },
-  {
-    path: 'car-edit/:id',
-    component: CarEditComponent
   },
   {
     path: 'book-list',
@@ -61,8 +47,6 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
-    CarListComponent,
-    CarEditComponent,
     HomeComponent,
     BookListComponent,
     BookEditComponent
